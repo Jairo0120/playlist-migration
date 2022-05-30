@@ -1,0 +1,13 @@
+{
+    "editor.rulers": [79],
+    "python.autoComplete.addBrackets": true,
+    "python.analysis.extraPaths": [
+        "./playlist_migration/playlist_migration",
+    ],
+    "python.analysis.completeFunctionParens": true,
+    "python.testing.pytestArgs": [
+        "."
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
+}

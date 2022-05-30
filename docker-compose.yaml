@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  postgres-dev:
+    image: postgres:14.3-alpine
+    volumnes:
+      - ~/Docker/Databases/postgres-dev-pm/data:/var/lib/postgresql/data
+    env_file:
+      - ./.envs/.local/.postgres
+    ports:
+      - "5432:5432"
+
+  playlist-migration:
+    build:
+      context: .
+      dockerfile: ./compose/local/django/Dockerfile
+    volumes:
+      - ./playlist_migration/.:/app
+    env_file:
+      - ./.envs/.local/.postgres
+    ports:
+      - "9000:8000"
+    links:
+      - postgres-dev:postgres
+    depends_on:
+      - postgres-dev
+    command: /start

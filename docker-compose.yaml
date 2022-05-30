@@ -3,7 +3,7 @@ version: "3.9"
 services:
   postgres-dev:
     image: postgres:14.3-alpine
-    volumnes:
+    volumes:
       - ~/Docker/Databases/postgres-dev-pm/data:/var/lib/postgresql/data
     env_file:
       - ./.envs/.local/.postgres

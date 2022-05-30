@@ -29,3 +29,9 @@ until postgres_ready; do
 done
 
 echo >&2 'PostgreSQL is available'
+
+# this exec "$@" basically takes any command line arguments passed
+# to entrypoint.sh and execs them as a command. The intention is
+# basically "Do everything in this .sh script, then in the same shell
+# run the command the user passes in on the command line"
+exec "$@"

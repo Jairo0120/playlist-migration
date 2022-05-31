@@ -1,5 +1,7 @@
 FROM python:3.10-slim-buster
-RUN apt update && apt install libpq-dev gcc -y
+RUN apt update && apt install libpq-dev gcc -y \
+    # Only for development
+    && apt install git -y
 RUN adduser --disabled-login django
 COPY ./requirements /requirements
 COPY ./compose/local/django/start /start

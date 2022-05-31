@@ -15,7 +15,7 @@ services:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
     volumes:
-      - ./playlist_migration/.:/app
+      - ./.:/app
     env_file:
       - ./.envs/.local/.postgres
       - ./.envs/.local/.django

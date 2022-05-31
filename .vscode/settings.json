@@ -1,6 +1,5 @@
 {
     "editor.rulers": [79],
-    "python.autoComplete.addBrackets": true,
     "python.analysis.extraPaths": [
         "./playlist_migration/playlist_migration",
     ],

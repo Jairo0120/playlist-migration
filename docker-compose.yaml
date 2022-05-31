@@ -18,6 +18,7 @@ services:
       - ./playlist_migration/.:/app
     env_file:
       - ./.envs/.local/.postgres
+      - ./.envs/.local/.django
     ports:
       - "9000:8000"
     links:

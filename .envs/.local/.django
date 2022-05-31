@@ -1,0 +1,4 @@
+DJANGO_SECRET_KEY=!70dhunz+8bbddez_76b%f-==s7y!nzr2t3dr=-^bqs8e9!2!&
+DJANGO_DEBUG=True
+DJANGO_ALLOWED_HOSTS=localhost
+DJANGO_LOGGER_LEVEL=INFO

@@ -1,15 +1,13 @@
 FROM python:3.10-slim-buster
 RUN apt update && apt install libpq-dev gcc -y \
     # Only for development
-    && apt install git -y
-RUN adduser --disabled-login django
+    && apt install git default-jdk -y
+RUN adduser --disabled-login fast
 COPY ./requirements /requirements
-COPY ./compose/local/django/start /start
+COPY ./compose/local/fastapi/start /start
 RUN chmod +x /start
-COPY ./compose/local/django/entrypoint /entrypoint
+COPY ./compose/local/fastapi/entrypoint /entrypoint
 RUN chmod +x /entrypoint
 RUN pip install -r /requirements/local.txt
-USER django
+USER fast
 WORKDIR /app
-
-ENTRYPOINT ["/entrypoint"]

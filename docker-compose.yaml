@@ -13,12 +13,11 @@ services:
   playlist-migration:
     build:
       context: .
-      dockerfile: ./compose/local/django/Dockerfile
+      dockerfile: ./compose/local/fastapi/Dockerfile
     volumes:
       - ./.:/app
     env_file:
       - ./.envs/.local/.postgres
-      - ./.envs/.local/.django
     ports:
       - "9000:8000"
     links:

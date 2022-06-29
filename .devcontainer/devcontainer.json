@@ -24,7 +24,8 @@
 
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": ["eamodio.gitlens", "ms-python.python", "RobbOwen.synthwave-vscode",
-                    "shardulm94.trailing-spaces", "SonarSource.sonarlint-vscode"]
+                    "shardulm94.trailing-spaces", "SonarSource.sonarlint-vscode",
+                    "aaronthomas.vscode-snazzy-operator"],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [8000],
@@ -39,5 +40,5 @@
 	// "postCreateCommand": "apt-get update && apt-get install -y curl",
 
 	// Uncomment to connect as a non-root user if you've added one. See https://aka.ms/vscode-remote/containers/non-root.
-	// "remoteUser": "django"
+	"remoteUser": "fast"
 }

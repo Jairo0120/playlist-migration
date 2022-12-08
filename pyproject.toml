@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "playlist-migration"
+version = "0.1.0"
+description = "Backend application to migrate playlists from difference audio streaming platforms"
+authors = ["Jairo Leyton"]
+readme = "README.md"
+packages = [{include = "playlist_migration"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88"
+pydantic = "^1.10.2"
+uvicorn = {version = "^0.20.0", extras = ["standard"]}
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.2.0"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
